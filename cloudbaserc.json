@@ -1,0 +1,32 @@
+{
+  "envId": "fx",
+  "framework": {
+    "name": "github-stats",
+    "plugins": {
+      "server": {
+        "use": "@cloudbase/framework-plugin-node",
+        "inputs": {
+          "entry": "./api/index.js",
+          "path": "/api",
+          "name": "github-stats-api"
+        }
+      },
+      "pin": {
+        "use": "@cloudbase/framework-plugin-node",
+        "inputs": {
+          "entry": "./api/pin.js",
+          "path": "/api/pin",
+          "name": "github-stats-pin"
+        }
+      },
+      "top-langs": {
+        "use": "@cloudbase/framework-plugin-node",
+        "inputs": {
+          "entry": "./api/top-langs.js",
+          "path": "/api/top-langs",
+          "name": "github-stats-top-langs"
+        }
+      }
+    }
+  }
+}
